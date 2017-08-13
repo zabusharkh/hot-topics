@@ -1,0 +1,431 @@
+/*
+
+ Colour palette:
+    primary-dark: #4F96CC
+    primary-light: #63BCFF
+    secondary-light: #B0DDFF
+    secondary-dark: #586E7F
+    
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:400,600|Cardo');
+@import url('https://fonts.googleapis.com/css?family=Crushed');
+
+/*-- MOBILE DEVICE - Content needs to be displayed in 1 column --*/
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Josefin Sans',Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    font-size: 0.618rem;
+    line-height: 1.618;
+    background-color: white;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Cardo', Times, serif;
+    font-weight: 700;
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* Add this class to any HTML element that needs clearing float */
+
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+
+header,
+main,
+footer{
+    width: 100%;
+}
+
+
+/*-- .content-box styles entire content --*/
+
+.content-box,
+.box{
+    text-align: center;
+    margin: 0 1rem;
+}
+
+.wrapper {
+    max-width: 100rem;
+    
+     display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo h1 {
+    color: #4F96CC;
+    font-family: 'Crushed', cursive;
+    text-align: center;
+}
+
+.logo h1 i {
+    color: #63BCFF;
+}
+
+.nav-bg .content-box {
+    margin: 0 1rem 1rem 1rem;
+}
+
+
+/*-- NAVIGATION --*/
+
+.nav-bar {
+    width: 100%;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    font-family: 'Josefin Sans', Arial, sans-serif;
+}
+
+.nav-bar li {
+    display: inline;
+}
+
+.nav-bar li a {
+    display: block;
+    background-color: #B0DDFF;
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    margin: 0 0 10px 0;
+}
+
+.nav-bar li a:hover {
+    background-color: #FFF;
+    color: #B0DDFF;
+}
+
+.nav-bar li:last-child a {
+    margin: 0;
+}
+
+.masthead-bg {
+    background-color: #63BCFF;
+    background-image: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), url("../img/masthead.jpg");
+   background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    color: #B0DDFF;
+    text-align: center;
+    padding: 2rem;
+}
+
+.masthead-bg h2 {
+    margin: 0;
+    padding: 2rem 0;
+}
+
+/*-- STYLING MAIN CONTENT --*/
+
+main {
+    background-color: #586E7F;
+    color: #FFF;
+}
+
+main .box {
+    padding: 1% 3%;
+}
+
+main .box h1 {
+    color: #4F96CC;
+    text-align: center;
+}
+
+main .box h4 {
+    font-family: 'Josefin Sans', Arial, sans-serif;
+    font-weight: 600;
+    margin-top: 0;
+}
+
+main .box figcaption {
+    text-align: center;
+    margin: 2% 0;
+}
+
+.qoute{
+   color: #B0DDFF;
+}
+
+main .box input,
+main .box textarea{
+    width: 100%;
+    background-color: white;
+    border: 0;
+    color:  #4F96CC;
+    padding: .5em;
+    margin: 2% 0;
+}
+
+main .box textarea{
+    height: 200px;
+}
+
+main .box input[type=submit]{
+    background-color: #4F96CC;
+    color: #ffffff;
+}
+main .box input[type=submit]:hover {
+    background-color: #FFF;
+    color: #4F96CC;
+}
+
+
+/*-- Styling footer --*/
+
+.footer-bg {
+    background-color: #63BCFF;
+    color: white;
+    padding: 1rem 0;
+}
+
+.footer-bg p {
+    margin: 0;
+}
+
+footer {
+    width: 100%;
+    text-align: center;
+}
+
+.footer-left,
+.footer-right {
+    display: inline-block;
+    vertical-align: top;
+}
+
+
+/* Footer left */
+
+.footer-left {
+    width: 85%;
+}
+
+.footer-left i {
+    color: #4F96CC;
+    text-align: center;
+}
+
+.footer-left p {
+    display: inline-block;
+    color: white;
+    vertical-align: middle;
+    margin: 0;
+}
+
+.footer-left a {
+    color: white;
+}
+
+
+/* Footer Right */
+
+.footer-right a {
+    display: inline-block;
+    width: 2em;
+    height: 2em;
+    cursor: pointer;
+    background-color: #4F96CC;
+    border-radius: 2px;
+    font-size: 1.5em;
+    color: white;
+    text-align: center;
+    line-height: 2em;
+    margin-right: .25em;
+    margin-bottom: .5em;
+}
+
+
+@media screen and (min-width: 35rem) and (max-width: 60rem) {
+    /* font-size has to be 1rem for this viewport*/
+    /* navigation list has to be displayed horizontally
+       and the gap between two list items is 1px */
+    body {
+        font-size: 1rem;
+    }
+    .nav-bar {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+    .nav-bar li {
+        width: calc(50% - 10px);
+        display: inline-block;
+    }
+    .nav-bar li a {
+        margin: 0 10px 1px 0;
+    }
+    
+   .nav-bar li:last-child a{
+        margin: 0 0 1px 0;
+    }
+    main .box figure {
+        text-align: left;
+        float: left;
+        width: 40%;
+        margin-top: 0;
+    }
+    
+    main .box .small,
+    main .box input[type=submit]{
+        text-align: left;
+        float: left;
+        width: 30%;
+        display: block;
+        margin-top: 0;
+}
+    
+    main .box input{
+        margin-bottom: 3%;
+        margin-top: 0;
+    }
+    
+    main .box input[type=submit]{
+        margin-top: 3%;
+    }
+
+main .box textarea{
+    height: 120px;
+        width: 65%;
+    float: right;
+    margin-top: 0;
+}
+
+}
+
+
+
+@media screen and (min-width: 60rem) {
+    body {
+        font-size: 1.618rem;
+    }
+    .logo{
+        float: left;
+        width: 40%;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .nav-bg .content-box{
+        margin-bottom: 3rem;
+    }
+    
+    .nav-bar {
+        float: right;
+       width: 60%;
+        padding: 0;
+        margin: 0;
+    }
+    .nav-bar li {
+        width: calc(30% - 10px);
+        display: inline-block;
+    }
+    .nav-bar li a {
+        margin: 0 10px 1px 0;
+    }
+    
+   .nav-bar li:last-child a{
+        margin: 0 0 1px 0;
+    }
+    
+    .masthead-bg{
+        text-align: left;
+        padding-left: 8em;
+    }
+    
+    .content-box,
+    .box{
+        text-align: left;
+    }
+    /* .wrapper has to be aligned in the middle of viewport */
+    .wrapper {
+        text-align: center;
+    }
+    main .box{
+        padding: 0 7%;
+    }
+    
+    main .box h1 {
+        text-align: left;
+    }
+    main .box figure {
+        text-align: left;
+        float: left;
+        width: 40%;
+        margin-top: 0;
+    }
+    
+    main .box .col-2{
+        text-align: left;
+        float: left;
+        width: 45%;
+        margin: 0 0 0 5%;
+    }
+    main .box:last-child{
+        margin-right: 0;
+    }
+    
+        main .box .small,
+    main .box input[type=submit]{
+        text-align: left;
+        float: left;
+        width: 30%;
+        display: block;
+        margin-top: 0;
+}
+    
+    main .box input{
+        margin-bottom: 3%;
+        margin-top: 0;
+        padding: 1em;
+    }
+    
+    main .box input[type=submit]{
+        margin-top: 3%;
+        text-align: center;
+    }
+
+main .box textarea{
+    height: 175px;
+        width: 65%;
+    float: right;
+    margin-top: 0;
+}
+
+}
